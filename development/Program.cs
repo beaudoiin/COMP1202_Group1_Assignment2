@@ -1,11 +1,11 @@
 namespace assignment2 {
     internal class Program {
-        //Keeping track of the connection between each course and student is handled internally inside those respective classes.
+        //Keeping track of the connection between each course and student is handled inside College class whcih handles thse administrative actions.
 
         //Keep track of all students that have been enrolled at the college
-        static List<Student>? students;
+        //static List<Student>? students; //store inside College class
         //Keep track of all courses provided by the college.
-        static List<Course>? courses;
+        //static List<Course>? courses; // store inside Collage class as 2d array
         /// <summary>
         /// This variable should be changed to true if anything information that would normally be saved is changed. This includes but is not limited to
         ///Adding a student, Adding a course, updating either's information, changing settings, removind records.
