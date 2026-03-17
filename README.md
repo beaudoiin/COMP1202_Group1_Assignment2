@@ -1,2 +1,3 @@
 # COMP1202_Group1_Assignment2
-Documentation expectation to be defined amongst group members then populated. see example word doc from assignment 1
+Populate this as group memebers colaborate.
+Due date is april 12th. Assignment instructions uploaded to main, and sample documentation as well.
