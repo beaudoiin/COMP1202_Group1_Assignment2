@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace assignment2 {
     internal class Course {
+        //A list of the students enrolled in a specific course
+        public List<Student>? enrolledStudents { get; }
     }
 }
