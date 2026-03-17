@@ -14,14 +14,14 @@ Currently there are three folders.
 
 # Members Responsabilities
 * Nabiha
-      To be discussed
+  * To be discussed
 * Jax
-        To be discussed
+  * To be discussed
 * Eric (Example list, to be discussed)
-      Running the Git Hub
-      Final Code Review
-      Documentation Oversight
-      Code Oversight
-      File Saving Oversight
-      Displaying running lists
-      Project Co-ordination
+  * Running the Git Hub
+  * Final Code Review
+  * Documentation Oversight
+  * Code Oversight
+  * File Saving Oversight
+  * Displaying running lists
+  * Project Co-ordination
