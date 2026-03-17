@@ -30,12 +30,13 @@
                 Console.ForegroundColor = ( ConsoleColor ) fg;
             if ( bg != null )
                 Console.BackgroundColor = ( ConsoleColor ) bg;
-            //simply writes the message depding on the flag. This allows for a method called WriteLine to change this (or manualy set)
+            //simply writes the message depending on the flag. This allows for a method called WriteLine to change this (or manualy set)
             if ( WriteLine )
                 Console.WriteLine( msg );
             else
                 Console.Write( msg );
             if ( WaitForAcknowledgment ) {
+                //The below can be  a defualt press any key to continue message, otherwise you can implement this dictionary of messages based on a MessageEnum that holds unique message integer,
                 ColorConsole.WriteLine( $"\n({messageOutput [ MessageEnum.Label_Press ]} : {messageOutput [ MessageEnum.SystemInstructions_AnyKeyToAck ]})", colorByGroup [ ColorGroup.SystemInstructionsGray ] );
                 Console.ReadKey( intercept: true );
             }
