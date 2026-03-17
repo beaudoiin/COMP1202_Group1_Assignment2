@@ -10,7 +10,7 @@ Populate this folder as group members' collaboration and notes.
 
  3. Reference code we may want to incorporate, which is not ready or not fully decided it should go in. For example, I added a ColorConsole class, which replaces Console. Write and writeLine. This is not incorporated because it currently requires enums to set the colors, a dictionary for the error message, and is a replacement for ANSI escape codes, which may be the way we want to go instead. Other such codes are in there; take a look.
 
- 4. Main folder, for these three folders and the readme. We may add other project-wide READMEs, like if each contributor wants [TheirName].md to display a running list of what they have implemented, are in charge of, or their thoughts.
+ 4. Main folder, for these three folders and the readme. We may add other project-wide READMEs, like if each contributor wants **[TheirName].md** to display a running list of what they have implemented, are in charge of, or their thoughts.
 
 # Members Responsabilities
 * **Nabiha**
