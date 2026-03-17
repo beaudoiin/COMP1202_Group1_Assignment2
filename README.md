@@ -2,7 +2,7 @@
 
 Populate this folder as group members' collaboration and notes.
 
-Currently there are three folders.
+**Currently there are three folders:**
 
  1. Development: Actual acceptable code for the project can go here. If you want to test some specifics, do so on your local machine or on a forked repository.
 
@@ -13,11 +13,13 @@ Currently there are three folders.
  4. Main folder, for these three folders and the readme. We may add other project-wide READMEs, like if each contributor wants [TheirName].md to display a running list of what they have implemented, are in charge of, or their thoughts.
 
 # Members Responsabilities
-* Nabiha
+* **Nabiha**
   * To be discussed
-* Jax
+    
+* **Jax**
   * To be discussed
-* Eric (Example list, to be discussed)
+    
+* **Eric** (Example list, to be discussed)
   * Running the Git Hub
   * Final Code Review
   * Documentation Oversight
