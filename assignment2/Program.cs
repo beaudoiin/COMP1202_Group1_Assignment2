@@ -101,8 +101,9 @@ namespace assignment2 {
         /// <returns>String with the users email</returns>
         static string? GetEmail() {
             string? email = null;
-            string emailRulePattern = "+*@*+.*+";
-            Regex emailRule = new( emailRulePattern );
+            //simple regex pattern found at https://www.regular-expressions.info/email.html
+            string emailRulePattern = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$.";
+            Regex emailRule = new( emailRulePattern, RegexOptions.IgnoreCase );
             while ( true ) {
                 Console.WriteLine( "Rules related to email:" );
                 Console.WriteLine( "Email must contain an @ sign and a valid domain. Entering an empty string or all spaces will register the student with no email." );
@@ -110,6 +111,9 @@ namespace assignment2 {
                 email = Console.ReadLine();
                 if ( emailRule.IsMatch( email ) )
                     return email;
+                else if ( string.IsNullOrWhiteSpace( email ) ) {
+                    return null;
+                }
                 Console.WriteLine( "(Bad Input!) This is not a proper email, please try again" );
                 Console.WriteLine( "Press any key to continue" );
                 Console.ReadKey();
