@@ -1,3 +1,5 @@
+﻿using System.Text.RegularExpressions;
+
 namespace assignment2 {
     internal class Program {
         //Keeping track of the connection between each course and student is handled inside College class whcih handles thse administrative actions.
@@ -92,6 +94,31 @@ namespace assignment2 {
             //Run function with REGEX to get email, must contain @ and .
             //Store data as new student
         }
-
+        /// <summary>
+        /// Validates user input for emails. Double check pattern then update this comment.
+        /// Also update to use color console with fancy formating and uniform error messages, perhaps using color console.
+        /// </summary>
+        /// <returns>String with the users email</returns>
+        static string? GetEmail() {
+            string? email = null;
+            //simple regex pattern found at https://www.regular-expressions.info/email.html
+            string emailRulePattern = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$.";
+            Regex emailRule = new( emailRulePattern, RegexOptions.IgnoreCase );
+            while ( true ) {
+                Console.WriteLine( "Rules related to email:" );
+                Console.WriteLine( "Email must contain an @ sign and a valid domain. Entering an empty string or all spaces will register the student with no email." );
+                Console.WriteLine( "Enter the users email: " );
+                email = Console.ReadLine();
+                if ( emailRule.IsMatch( email ) )
+                    return email;
+                else if ( string.IsNullOrWhiteSpace( email ) ) {
+                    return null;
+                }
+                Console.WriteLine( "(Bad Input!) This is not a proper email, please try again" );
+                Console.WriteLine( "Press any key to continue" );
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
     }
 }
