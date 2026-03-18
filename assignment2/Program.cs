@@ -1,7 +1,10 @@
 ﻿using System.Text.RegularExpressions;
 
 namespace assignment2 {
-    internal class Program {
+    /// <summary>
+    /// Man program defined as partial for splitting some methods into other files. Merges back at compile time
+    /// </summary>
+    internal partial class Program {
         //Keeping track of the connection between each course and student is handled inside College class whcih handles thse administrative actions.
 
         //Keep track of all students that have been enrolled at the college

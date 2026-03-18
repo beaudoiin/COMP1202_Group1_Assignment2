@@ -8054,36 +8054,7 @@ namespace Assignment1 {
             #endregion
         }
 
-        /// <summary>
-        /// Prints a reusable message and asks the user to press any key to continue. This is for convenience.
-        /// User can also supply a message if they want. Default is to use a dictionary item by enum 
-        /// messageOutput[MessageEnum.PressAnyKeyToContinue]
-        /// </summary>
-        /// <param name="ClearAfter">True if you want to clear the screen after</param>
-        /// <param name="BypassMsg">True if you dont want to print the suplpied message</param>
-        /// <param name="WriteLine">True if you want this to be on its own line</param>
-        public static void AnyKeyToContinue( bool ClearAfter = false, bool BypassMsg = false, bool WriteLine = true, string msg = "", bool DontChangeColor = false ) {
-
-            if ( string.IsNullOrWhiteSpace( msg ) )
-                msg = $"({messageOutput [ MessageEnum.Label_Press ]} {messageOutput [ MessageEnum.System_AnyKeyToContinue ]})";
-            if ( !BypassMsg )
-                if ( WriteLine ) {
-                    if ( DontChangeColor == true )
-                        ColorConsole.WriteLine( msg, ConsoleColor.Gray );
-                    else
-                        ColorConsole.WriteLine( msg );
-                } else {
-                    if ( DontChangeColor == true )
-                        Console.Write( msg, ConsoleColor.Gray );
-                    else
-                        Console.Write( msg );
-                }
-
-            Console.ReadKey( true );
-            if ( ClearAfter ) {
-                Console.Write( "\x1b[3J" ); Console.Clear();
-            }
-        }
+-
 
         /// <summary>
         /// //ChatGpt Tool for converting languages quickly, Converts a dictionary to xml. read comments inside
