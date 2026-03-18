@@ -6,14 +6,18 @@ namespace assignment2 {
         //Links a student to a course and their grade information.
 
         //Stores the List of students per course
-        public static required Dictionary<Course, List<Student>> CourseHasWhatStudents;
+        public static Dictionary<Course, List<Student>> CourseHasWhatStudents;
         //Stores the list of courses per student
-        public static required Dictionary<Student, List<Course>> StudentHasWhatCourses;
+        public static Dictionary<Student, List<Course>> StudentHasWhatCourses;
         #endregion
 
-        #region /// Method 2 for storing Student/Course relationship - Array of lists
-        //Populate this because using indexes in 2d array seems dumb. Good for only once source of thruth bad for tracking specifics in my opinion.
+        #region /// Method 2 for storing Student/Course relationship - Array of objects, professors prefrence
+        //This stores the profile that contains the student and the registration. When adding a new student or course we track these with lists, and simply allow null if not registerd
+        //There is some benefit to this but you still have to track which student and course is being talked about.
+        StudentCourseProfile? [ , ] StudentCourseEnrollment;
         #endregion
 
+        public College() {
+        }
     }
 }
