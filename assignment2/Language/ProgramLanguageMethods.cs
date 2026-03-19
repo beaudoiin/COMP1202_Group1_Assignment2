@@ -24,7 +24,7 @@ using namespace assignment2 {
             //Load config file with langauge if it exists already
             bool refPW = false; //placeholder, password hardcoded should be fine
             bool loadLanguageOptionsListFromFile = false;
-            Configuration? loadedConfig = SecureFile.Load<Configuration>( configFile, ref refPW );
+            Configuration? loadedConfig = SecureFile.Load<Configuration>( s_configFile, ref refPW );
             if ( loadedConfig is not null && !bypassConfig ) {
                 config = loadedConfig;
                 loadLanguageOptionsListFromFile = true;
@@ -129,7 +129,7 @@ using namespace assignment2 {
                 }
                 //Add code here to load language
                 config.language = language;
-                SecureFile.Save( configFile, config );
+                SecureFile.Save( s_configFile, config );
                 //just left these errors as defualt english, assuming issue with xml means its defualting to english anyways
             }
             catch ( XmlException ) { ColorConsole.Write( $" {defaultEnglishMessages [ MessageEnum.Warning_XmlFormat ]} ", colorByGroup [ ColorGroup.SystemError ] ); exceptionCaught = true; }
