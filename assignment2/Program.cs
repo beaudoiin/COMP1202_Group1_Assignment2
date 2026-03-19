@@ -1,4 +1,33 @@
-﻿using System.Text.RegularExpressions;
+﻿/* #####################################################################################################
+ * ################################### College Application #############################################
+ * #####################################################################################################
+
+ * ######### Created By #############
+ * Nabiha fahad     GBP ID: 101462243
+ * Jax Hobbs        GBP ID: 101360158
+ * Eric Beaudoin    GBP ID: 101462947
+ * ##################################
+ * 
+ * #####################################################################################################
+ * ##### General Collaberation Notes To Be Updated Or Deleted as Needed and before file submission #####
+ * #####################################################################################################
+ * 
+ * Please read the commends carefully and familiarize your self with the code. I am currently writing
+ * the code to get us started untill I hear back from you guys. We can omit features if needed, or start
+ * fresh if you guys so prefer. This is an attempt at a robust software that provides a TUI experience
+ * for the user. The aim is for practical deployment.
+ * 
+ * Most of this code is borrowed or used from my Assignment 1, as of 3/18/2026
+ * 
+ * #####################################################################################################
+ * ######################################## Other general notes ########################################
+ * #####################################################################################################
+ * 
+ * There may be a lot to take in, maybe not. But it sure is fun! :D
+ * 
+ */
+
+using System.Text.RegularExpressions;
 
 namespace assignment2 {
     /// <summary>
@@ -18,6 +47,15 @@ namespace assignment2 {
         /// Use this to display a warning on exiting, to confirm if user wants to leave without saving changes.
         /// </summary>
         static bool dataChange = false;
+
+        //File names for loading and saving various files, you can adjust as needed.
+        static string studentFileName = @"students.dat";
+        static string courseFileName = @"courses.dat";
+        static string studentCourseFileName = @"studentCourseRelation.dat"; //Debating name
+        static string configFile = "settings.config";
+
+        //Specify lists and dictionaries here related to storing objects at main program scope. Currently handled by the college class.
+        static College? CollegeManager;
 
         static void Main( string [ ] args ) {
             //Initialize detials such as UTF8 console encoding, defualt colors for background and foreground. and other such detials.

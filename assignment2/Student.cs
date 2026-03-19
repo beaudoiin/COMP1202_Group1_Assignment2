@@ -1,8 +1,11 @@
-﻿namespace assignment2 {
+﻿using System.Text.Json.Serialization;
+
+namespace assignment2 {
     /// <summary>
     /// A class to define students enrolled in the college. This class creatues objects with unique IDs, names, emails and a list of the courses enrolled in.
     /// This summary is to be updated as this class is expanded.
     /// </summary>
+    [Serializable]
     internal class Student {
         //UNIQUE incrimented ID. This is important to save and reset at every load, when loading students from a file.
         //Be sure to include this in the JSON string so that if 10 users are added, and number 9 is removed, the program wont start at 9 again or try to start at 0!
@@ -21,6 +24,7 @@
         /// </summary>
         /// <param name="name"></param>
         /// <param name="email"></param>
+        [JsonConstructor]
         public Student( string name, string email ) {
             this.name = name;
             this.email = email;

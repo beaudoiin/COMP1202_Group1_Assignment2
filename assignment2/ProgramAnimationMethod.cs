@@ -17,6 +17,7 @@ namespace assignment2 {
                 Console.Write( "\x1b[3J" ); Console.Clear();
             }
         }
+        //The bottom is only an example, it is not needed for this program but can be used as a template for animating the programs intro. Update as needed.
         /// <summary>
         /// Animates the logo of the Cornerstone Financial Management System in the console with a multi-pass visual
         /// effect, transitioning from monochrome to color and displaying system information.

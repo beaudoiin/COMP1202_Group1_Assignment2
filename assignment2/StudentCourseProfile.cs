@@ -1,4 +1,7 @@
-﻿namespace assignment2 {
+﻿using System.Text.Json.Serialization;
+
+namespace assignment2 {
+    [Serializable]
     class StudentCourseProfile {
 
         /// <summary>
@@ -23,6 +26,7 @@
         /// <param name="student">Student associated in this relationship</param>
         /// <param name="course">Course associated in this relatioship</param>
         /// <param name="registrationDate">Date the student Registered</param>
+        [JsonConstructor]
         StudentCourseProfile( Student student, Course course, DateOnly registrationDate ) {
             Student = student;
             Course = course;
