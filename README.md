@@ -49,4 +49,4 @@ Populate this folder as group members' collaboration and notes.
   * Refrence >> ViewTransactionsListExample.cs >> Also this uses my custom dictionary and enums, so it may be a bit convoluted, so rely on asking me questions or the comments. it is a Text User Interface (TUI) we may want to incorperate into our program.
   * Refrence >> Assignment1Variousmethods.cs >> This one as some important ones like searching by amount, by date, by catergory. we can change it to search by date for registration, by name or by email. It gives some examples using LINQ, returns filtered lists and then passes to "ViewTransactionsList".
 
-# Any additional information request will need to be directed to me
+# Any additional information request on what i did will need to be directed to me, because I get that it may look confusing at this point, as there is a lot of partialy implimented data.
