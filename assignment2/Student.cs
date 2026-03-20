@@ -9,14 +9,16 @@ namespace assignment2 {
     internal class Student {
         //UNIQUE incrimented ID. This is important to save and reset at every load, when loading students from a file.
         //Be sure to include this in the JSON string so that if 10 users are added, and number 9 is removed, the program wont start at 9 again or try to start at 0!
-        private static int ID { get; set; } = 0;
+
+        [JsonInclude]
+        private static int s_studentIDGenerator = 0;
         /// <summary>
         /// A unique ID for each student. you may want to consider using a 9 digit number as most institutions use.
         /// </summary>
         public int StudentId { get; set; }
-        public string name { get; }
+        public string Name { get; }
         //Email should be validated, impliment at a future date.
-        public string email { get; }
+        public string Email { get; }
         //A list of the students enrolled in a specific course
         public List<Course>? enrolledCourses { get; }
         /// <summary>
@@ -26,10 +28,9 @@ namespace assignment2 {
         /// <param name="email"></param>
         [JsonConstructor]
         public Student( string name, string email ) {
-            this.name = name;
-            this.email = email;
-            StudentId = ID;
-            ID++;
+            this.Name = name;
+            this.Email = email;
+            StudentId = ++s_studentIDGenerator;
         }
         /// <summary>
         /// This may not be nesacarry as this is very redamentry. Remove if you are nopt planning on using genaric data (Ie, no advanced formatting)
