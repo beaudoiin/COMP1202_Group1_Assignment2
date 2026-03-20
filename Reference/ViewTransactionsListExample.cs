@@ -23,6 +23,7 @@ namespace Assignment2 {
             if ( passedTransactions.Count == 0 ) {
                 ColorConsole.WriteLine( $" {messageOutput [ MessageEnum.System_NoReleventTransactions ]} ", colorByGroup [ ColorGroup.SystemError ] );
                 AnyKeyToContinue( true );
+                //This may have been missing a return false;
             }
             //Print the instructions
             ColorConsole.WriteLine( messageOutput [ MessageEnum.ReportAndSum_AskHowToView ], colorByGroup [ ColorGroup.Header ] );
