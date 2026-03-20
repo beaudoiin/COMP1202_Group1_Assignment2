@@ -1,4 +1,4 @@
-﻿namespace Assignment2 {
+﻿namespace assignment2 {
     /// <summary>
     /// Provides static methods for writing messages to the console with customizable foreground and background colors,
     /// supporting both single-line and multi-line output, as well as reading input with color changes.
@@ -37,7 +37,8 @@
                 Console.Write( msg );
             if ( WaitForAcknowledgment ) {
                 //The below can be  a defualt press any key to continue message, otherwise you can implement this dictionary of messages based on a MessageEnum that holds unique message integer,
-                ColorConsole.WriteLine( $"\n({messageOutput [ MessageEnum.Label_Press ]} : {messageOutput [ MessageEnum.SystemInstructions_AnyKeyToAck ]})", colorByGroup [ ColorGroup.SystemInstructionsGray ] );
+                //ColorConsole.WriteLine( $"\n({messageOutput [ MessageEnum.Label_Press ]} : {messageOutput [ MessageEnum.SystemInstructions_AnyKeyToAck ]})", colorByGroup [ ColorGroup.SystemInstructionsGray ] );
+                ColorConsole.WriteLine( $"\n(Press any key to acknowldge)" );
                 Console.ReadKey( intercept: true );
             }
             if ( ColorAfterFg is not null )

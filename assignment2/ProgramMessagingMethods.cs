@@ -1,5 +1,4 @@
 //Requires console color code
-using Assignment2;
 namespace assignment2 {
     /// <summary>
     /// Man program defined as partial for splitting some methods into other files. Merges back at compile time
@@ -16,7 +15,8 @@ namespace assignment2 {
         public static void AnyKeyToContinue( bool ClearAfter = false, bool BypassMsg = false, bool WriteLine = true, string msg = "", bool DontChangeColor = false ) {
 
             if ( string.IsNullOrWhiteSpace( msg ) )
-                msg = $"({messageOutput [ MessageEnum.Label_Press ]} {messageOutput [ MessageEnum.System_AnyKeyToContinue ]})";
+                //msg = $"({messageOutput [ MessageEnum.Label_Press ]} {messageOutput [ MessageEnum.System_AnyKeyToContinue ]})";
+                msg = $"(Press any key to continue)";
             if ( !BypassMsg )
                 if ( WriteLine ) {
                     if ( DontChangeColor == true )

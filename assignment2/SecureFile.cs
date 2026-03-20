@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 
-namespace Assignment2 {
+namespace assignment2 {
     /// <summary>
     /// Provides methods for securely loading and saving files, with optional encryption using a password.
     /// </summary>

@@ -1,4 +1,4 @@
-﻿namespace Assignment2 {
+﻿namespace assignment2 {
     //Used for storing the colors for specificstring types. You use this to set the console color for consistancy, or use a custom
     //method such as ColorConsole (user defined) where the message and color is passed. This way the main program is not riddled 
     //with many lines of ccolor formatting.
