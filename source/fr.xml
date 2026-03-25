@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Below is an example of the french dictionary used in Assingmnet 1. Essentially the Key is the name of a record in an Enum "MessageEnum" or similar.
+This is used as the Key in a dictionary for outputMessage, and defaultEnglisgMessage.
+The program will look in the Language folder, find the xml and itterate through each decendent of the child of lang.
+If a record is missing the defualtEnglish will be used, otherwise this message will be used and loaded into the outputMessage dictionary.
+A good way to assist in converting langauges quickly is to mimic the defaultEnglishMessage dictionary with .Add into a french one, then write a script
+that will take each record and convert it to the xml and write it in a file. Before converting, each dictionary is compared, if a Key is missing,
+or extra an error will determine which one and alert the user so that they do not have Duplicate keys, Extra Keys, or Missing Keys. Extra Keys may not
+necasarily pose a problem, nor will missing keys, but extra keys can cause exceptions.
+Below can be overridden or updated, this is just a demo. Upon updating, change this comment to reflect that -->
+<lang>
+	<fr>
+		<!-- BudgetMenu -->
+		<item key="BudgetMenu_AmountAccepted">
+			<message>Montant accepté</message>
+		</item>
+		<item key="BudgetMenu_AmountExceeded">
+			<message>Le montant ne peut pas dépasser</message>
+		</item>
+		<item key="BudgetMenu_AmountInvalid">
+			<message>Le montant n'était pas valide</message>
+		</item>
+		<item key="BudgetMenu_BudgetExceeded">
+			<message>Budget dépassé</message>
+		</item>
+		<item key="BudgetMenu_CheckRemainBudget">
+			<message>Vérifier budget restant</message>
+		</item>
+		<item key="BudgetMenu_CurrentBalance">
+			<message>Vérifier le solde restant</message>
+		</item>
+		<item key="BudgetMenu_Header">
+			<message>Menu budget</message>
+		</item>
+		<item key="BudgetMenu_NotUpdated">
+			<message>Budget non mis à jour!</message>
+		</item>
+		<item key="BudgetMenu_SelectionInstruction">
+			<message>Appuyez sur une touche de menu ci-dessus, entrez le nouveau montant et appuyez sur entrée pour mettre à jour.</message>
+		</item>
+		<item key="BudgetMenu_SetMonthlyBudget">
+			<message>Définir budget mensuel</message>
+		</item>
+		<item key="BudgetMenu_UpdateBudgetCateg">
+			<message>Mettre à jour catégorie budget</message>
+		</item>
+		<item key="BudgetMenu_Updated">
+			<message>Budget mis à jour!</message>
+		</item>
+		<item key="BudgetMenu_UpdateInstruction">
+			<message>Lorsqu'une case est vide vous êtes en mode édition.</message>
+		</item>
+		<item key="BudgetMenu_Warning80PercentOverBudget">
+			<message>Attention! Vous avez dépassé 80% de votre budget</message>
+		</item>
+		<item key="BudgetMenu_WarningInstruction">
+			<message>Avertissements affichés si budget dépasse 80% ou 100%</message>
+		</item>
+		<!-- ChooseLang -->
+		<item key="ChooseLang_Header">
+			<message>Sélection de langue</message>
+		</item>
+		<item key="ChooseLang_LangApplied">
+			<message>Langue appliquée!</message>
+		</item>
+		<item key="ChooseLang_RevertingToEng">
+			<message>Retour au dictionnaire anglais par défaut</message>
+		</item>
+		<!-- DataOptions -->
+		<item key="DataOptions_DeleteTransactions">
+			<message>Supprimer toutes les transactions</message>
+		</item>
+		<item key="DataOptions_Header">
+			<message>Sélection des données</message>
+		</item>
+		<item key="DataOptions_LabelAmountOfTrans">
+			<message>Nombre de transactions stockées</message>
+		</item>
+		<item key="DataOptions_LoadFile">
+			<message>Charger depuis disque</message>
+		</item>
+		<item key="DataOptions_LoadSample">
+			<message>Charger données exemple</message>
+		</item>
+		<item key="DataOptions_NoloadOrSamples">
+			<message>Démarrer sans transactions</message>
+		</item>
+		<item key="DataOptions_PrintTransactionCount">
+			<message>Afficher le nombre de transactions</message>
+		</item>
+		<item key="DataOptions_TransactionsDeleted">
+			<message>Toutes les transactions supprimées</message>
+		</item>
+		<item key="DataOptions_WarningSavingWithNoDataMayOverwrite">
+			<message>Attention: Charger des données exemple et modifier une transaction ou un budget ÉCRASERA votre fichier de transactions. Utiliser les données exemple seulement pour les tests.</message>
+		</item>
+		<item key="DataOptions_WarningThisPrintsOnlyRam">
+			<message>Ce nombre ne compte que ce qui est en mémoire, pas ce qui est dans le fichier.</message>
+		</item>
+		<!-- Excel -->
+		<item key="Excel_BankRec1">
+			<message>Selon vos revenus, nous pouvons vous offrir un REER géré à haut rendement pour maximiser vos gains (7% garanti par an).</message>
+		</item>
+		<item key="Excel_BankRec2">
+			<message>Selon vos revenus, nous pouvons vous offrir un REER géré à rendement moyen avec une garantie annuelle de 4%.</message>
+		</item>
+		<item key="Excel_BankRec3">
+			<message>Selon vos revenus, nous suggérons d'ouvrir un compte d'épargne pour commencer à bâtir un fonds d'urgence.</message>
+		</item>
+		<item key="Excel_BankRec4">
+			<message>Selon vos revenus, nous pouvons vous offrir une carte de crédit à intérêt élevé avec un TAEG de 22% et aucun intérêt le premier mois.</message>
+		</item>
+		<item key="Excel_BankRec5">
+			<message>Selon vos revenus, nous pouvons vous offrir une carte de crédit à intérêt moyen avec un TAEG de 12% et trois mois sans intérêt.</message>
+		</item>
+		<item key="Excel_BankRec6">
+			<message>Selon vos revenus, nous recommandons un service gratuit de conseil en crédit et de se concentrer sur l'obtention d'un revenu plus stable ou plus élevé.</message>
+		</item>
+		<item key="Excel_BankRec7">
+			<message>Votre situation financière semble critique. Veuillez visiter notre bureau immédiatement afin que nous puissions discuter des solutions possibles.</message>
+		</item>
+		<item key="Excel_BankRecommendations">
+			<message>Recommandations bancaires</message>
+		</item>
+		<item key="Excel_EmptyMonth">
+			<message>Il n'y a actuellement aucune transaction pour ce mois. Ce document est fourni pour vos dossiers.</message>
+		</item>
+		<item key="Excel_FileNoAccessMessage">
+			<message>Le fichier n'a pas pu être accédé. Assurez-vous qu'il n'est pas ouvert dans un autre programme et que cette application a la permission d'écrire dans ce dossier.</message>
+		</item>
+		<item key="Excel_SavedMessage">
+			<message>Feuille Excel sauvegardée dans le même dossier que l'exécutable.</message>
+		</item>
+		<item key="Excel_WelcomeMessage">
+			<message>Merci d'utiliser notre programme. Nous espérons que vous apprécierez ce bref résumé de votre compte. Des détails supplémentaires se trouvent dans d'autres feuilles contenant les informations des 12 derniers mois.</message>
+		</item>
+		<item key="Excel_WorksheetNotFound">
+			<message>Feuille de calcul introuvable!</message>
+		</item>
+		<!-- GetCategory -->
+		<item key="GetCategory_ChooseCategory">
+			<message>Choisir une catégorie de transaction</message>
+		</item>
+		<item key="GetCategory_InstructionHowMakeChoice">
+			<message>Appuyez sur la touche correspondante pour faire un choix</message>
+		</item>
+		<!-- GetDate -->
+		<item key="GetDate_SameDates">
+			<message>Ces dates sont identiques! Vous devez entrer une date différente</message>
+		</item>
+		<item key="GetDate_SearchingDatesBetween">
+			<message>Recherche des dates entre</message>
+		</item>
+		<!-- GetPwd -->
+		<item key="GetPwd_ConfirmPw">
+			<message>Confirmer mot de passe pour vos fichiers</message>
+		</item>
+		<item key="GetPwd_EnterPw">
+			<message>Entrez le mot de passe pour vos fichiers</message>
+		</item>
+		<item key="GetPwd_Header">
+			<message>Entrer mot de passe pour les fichiers sécurisés</message>
+		</item>
+		<item key="GetPwd_Instruction15Chars">
+			<message>Au moins 15 caractères,</message>
+		</item>
+		<item key="GetPwd_InstructionContainDigit">
+			<message>Contient un chiffre</message>
+		</item>
+		<item key="GetPwd_InstructionMixCase">
+			<message>Contient des lettres majuscules et minuscules</message>
+		</item>
+		<item key="GetPwd_InstructionSpecialChar">
+			<message>Contient au moins 1 caractère spécial</message>
+		</item>
+		<item key="GetPwd_PwSafteyReminder">
+			<message>Rappelez-vous, ce mot de passe n'est pas stocké sur l'ordinateur. Vous devez le mémoriser sinon vous perdrez l'accès à votre base de données!</message>
+		</item>
+		<item key="GetPwd_SecurePwIsHeader">
+			<message>Un mot de passe sécurisé est</message>
+		</item>
+		<item key="GetPwd_Warning_OverOneTrillionWarning">
+			<message>Une transaction ne peut pas dépasser un trillion, veuillez la diviser en transactions plus petites</message>
+		</item>
+		<item key="GetPwd_Warning_PwDontMatch">
+			<message>Les mots de passe ne correspondent pas!</message>
+		</item>
+		<item key="GetPwd_Warning_PwDontMeetCriteria">
+			<message>Le mot de passe ne respecte pas les exigences.</message>
+		</item>
+		<!-- Label -->
+		<item key="Label_Aborted">
+			<message>Annulé</message>
+		</item>
+		<item key="Label_AddExpenseTransaction">
+			<message>Ajouter une transaction de dépense</message>
+		</item>
+		<item key="Label_AddIncomeTransaction">
+			<message>Ajouter une transaction de revenu</message>
+		</item>
+		<item key="Label_All">
+			<message>Tous</message>
+		</item>
+		<item key="Label_Amount">
+			<message>Montant</message>
+		</item>
+		<item key="Label_And">
+			<message>et</message>
+		</item>
+		<item key="Label_AtCostOf">
+			<message>au coût de</message>
+		</item>
+		<item key="Label_Attempt">
+			<message>Tentative</message>
+		</item>
+		<item key="Label_Balance">
+			<message>Solde</message>
+		</item>
+		<item key="Label_Category">
+			<message>Catégorie</message>
+		</item>
+		<item key="Label_Date">
+			<message>Date</message>
+		</item>
+		<item key="Label_Description">
+			<message>Description</message>
+		</item>
+		<item key="Label_Enter">
+			<message>Entrée</message>
+		</item>
+		<item key="Label_Exit">
+			<message>exit</message>
+		</item>
+		<item key="Label_Expense">
+			<message>Dépense</message>
+		</item>
+		<item key="Label_FileName">
+			<message>Nom du fichier</message>
+		</item>
+		<item key="Label_Found">
+			<message>Trouvé</message>
+		</item>
+		<item key="Label_HighestExpenseCategory">
+			<message>Catégorie de dépense la plus élevée</message>
+		</item>
+		<item key="Label_Income">
+			<message>Revenu</message>
+		</item>
+		<item key="Label_Instructions">
+			<message>Instructions</message>
+		</item>
+		<item key="Label_Monthly">
+			<message>Mensuel</message>
+		</item>
+		<item key="Label_No">
+			<message>Non</message>
+		</item>
+		<item key="Label_Options">
+			<message>Options</message>
+		</item>
+		<item key="Label_Or">
+			<message>ou</message>
+		</item>
+		<item key="Label_PageAbreviated">
+			<message>pg.</message>
+		</item>
+		<item key="Label_Press">
+			<message>Appuyer</message>
+		</item>
+		<item key="Label_SearchAborted">
+			<message>Recherche annulée</message>
+		</item>
+		<item key="Label_SForSecond">
+			<message>s</message>
+		</item>
+		<item key="Label_Starting">
+			<message>Démarrage</message>
+		</item>
+		<item key="Label_SummaryAborted">
+			<message>Résumé annulé</message>
+		</item>
+		<item key="Label_To">
+			<message>à</message>
+		</item>
+		<item key="Label_Total">
+			<message>Total</message>
+		</item>
+		<item key="Label_TotalBalances">
+			<message>Solde total</message>
+		</item>
+		<item key="Label_TotalExpenses">
+			<message>Dépenses totales</message>
+		</item>
+		<item key="Label_TotalIncome">
+			<message>Revenu total</message>
+		</item>
+		<item key="Label_toTryAgain">
+			<message>Pour réessayer</message>
+		</item>
+		<item key="Label_TransactionAborted">
+			<message>Transaction annulée</message>
+		</item>
+		<item key="Label_Yearly">
+			<message>Annuel</message>
+		</item>
+		<item key="Label_Years">
+			<message>Années</message>
+		</item>
+		<item key="Label_Yes">
+			<message>Oui</message>
+		</item>
+		<!-- LoadFile -->
+		<item key="LoadFile_ConfirmLoadingBudgetFileOnly">
+			<message>Voulez-vous charger seulement le fichier budget trouvé?</message>
+		</item>
+		<item key="LoadFile_ConfrimTryAnotherPw">
+			<message>Voulez-vous essayer un autre mot de passe?</message>
+		</item>
+		<item key="LoadFile_CooldownForNextAttempt">
+			<message>Refroidissement appliqué pour la prochaine tentative!</message>
+		</item>
+		<item key="LoadFile_EnterPwForTransactionFile">
+			<message>Entrez le mot de passe</message>
+		</item>
+		<item key="LoadFile_ForOtherOptionsSampleData">
+			<message>pour autres options (comme données exemple)</message>
+		</item>
+		<item key="LoadFile_IncorrectPwCoolDown">
+			<message>Refroidissement après mot de passe incorrect</message>
+		</item>
+		<item key="LoadFile_NoFileFound">
+			<message>Fichier introuvable dans le même dossier que l'exécutable!</message>
+		</item>
+		<item key="LoadFile_PwIncorrect">
+			<message>Le mot de passe ne correspond pas à celui attendu pour ce fichier!</message>
+		</item>
+		<item key="LoadFile_ToAbortStartNoTrans">
+			<message>Démarrer sans transactions</message>
+		</item>
+		<item key="LoadFile_TooManyIncorrect">
+			<message>Trop de tentatives de mot de passe incorrect.</message>
+		</item>
+		<item key="LoadFile_TooManyWrongPwAttempts">
+			<message>Trop de tentatives de mot de passe incorrect</message>
+		</item>
+		<!-- MainMenu -->
+		<item key="MainMenu_BudgetTools">
+			<message>Outils de budget</message>
+		</item>
+		<item key="MainMenu_Header">
+			<message>Menu principal</message>
+		</item>
+		<item key="MainMenu_Load">
+			<message>Charger fichier de transactions</message>
+		</item>
+		<item key="MainMenu_Options">
+			<message>Options</message>
+		</item>
+		<item key="MainMenu_ReportsAndSummary">
+			<message>Rapports et résumé</message>
+		</item>
+		<item key="MainMenu_Save">
+			<message>Sauvegarder fichier de transactions</message>
+		</item>
+		<item key="MainMenu_TransactionManagement">
+			<message>Gestion des transactions</message>
+		</item>
+		<!-- Menu -->
+		<item key="Menu_HeaderOuterDecor">
+			<message>------------</message>
+		</item>
+		<item key="Menu_Return">
+			<message>Retour au menu principal</message>
+		</item>
+		<!-- Options -->
+		<item key="Options_AutoSave">
+			<message>Sauvegarder fichier après chaque modification (lent)</message>
+		</item>
+		<item key="Options_ChangLang">
+			<message>Changer la langue</message>
+		</item>
+		<!-- ReportAndSum -->
+		<item key="ReportAndSum_AccountOverview">
+			<message>Aperçu du compte</message>
+		</item>
+		<item key="ReportAndSum_AccountSummary">
+			<message>Résumé du compte</message>
+		</item>
+		<item key="ReportAndSum_AcountSummaryFrom">
+			<message>Résumé du compte depuis</message>
+		</item>
+		<item key="ReportAndSum_AskHowToView">
+			<message>Comment voulez-vous afficher le rapport?</message>
+		</item>
+		<item key="ReportAndSum_HighestExpenseCategory">
+			<message>Catégorie de dépense la plus élevée</message>
+		</item>
+		<item key="ReportAndSum_MonthlySummary">
+			<message>Résumé mensuel</message>
+		</item>
+		<item key="ReportAndSum_NoTRansactionsInMonth">
+			<message>Aucune transaction dans ce mois, impossible d'afficher le résumé.</message>
+		</item>
+		<item key="ReportAndSum_NoTRansactionsInYear">
+			<message>Aucune transaction dans cette année, impossible d'afficher le résumé.</message>
+		</item>
+		<item key="ReportAndSum_PageAndScrollNoClear">
+			<message>Vue pages (ne pas effacer écran)</message>
+		</item>
+		<item key="ReportAndSum_Pages">
+			<message>Vue pages</message>
+		</item>
+		<item key="ReportAndSum_SaveExcel">
+			<message>Exporter le résumé du compte et 12 résumés mensuels dans un document Excel</message>
+		</item>
+		<item key="ReportAndSum_Scroll">
+			<message>Vue liste</message>
+		</item>
+		<item key="ReportAndSum_TotalExpense">
+			<message>Dépense totale</message>
+		</item>
+		<item key="ReportAndSum_TotalIncome">
+			<message>Revenu total</message>
+		</item>
+		<item key="ReportAndSum_YearlySummary">
+			<message>Résumé annuel</message>
+		</item>
+		<!-- Sample -->
+		<item key="Sample_Header">
+			<message>Chargement des transactions exemple...</message>
+		</item>
+		<item key="Sample_Loaded">
+			<message>transactions exemple chargées...</message>
+		</item>
+		<!-- SrcByTrans -->
+		<item key="SrcByTrans_Category">
+			<message>Par catégorie</message>
+		</item>
+		<item key="SrcByTrans_DateRange">
+			<message>Par plage de dates</message>
+		</item>
+		<item key="SrcByTrans_EnterDate1">
+			<message>Veuillez entrer la première date dans la plage.</message>
+		</item>
+		<item key="SrcByTrans_EnterDate2">
+			<message>Veuillez entrer la deuxième date dans la plage.</message>
+		</item>
+		<item key="SrcByTrans_FirstDateIs">
+			<message>La première date est</message>
+		</item>
+		<item key="SrcByTrans_HeaderQuestion">
+			<message>Comment voulez-vous rechercher les transactions?</message>
+		</item>
+		<item key="SrcByTrans_NoResultSrcAgain">
+			<message>Aucune transaction trouvée, essayez une recherche avec d'autres paramètres.</message>
+		</item>
+		<item key="SrcByTrans_OptionApplied">
+			<message>Options appliquées</message>
+		</item>
+		<item key="SrcByTrans_OptionOrderAsc">
+			<message>Trier par date ascendante</message>
+		</item>
+		<item key="SrcByTrans_OptionOrderDesc">
+			<message>Trier par date descendante</message>
+		</item>
+		<item key="SrcByTrans_OptionTableColorBanding">
+			<message>Bandes de couleur pour lecture plus facile</message>
+		</item>
+		<item key="SrcByTrans_PriceRange">
+			<message>Par plage de prix</message>
+		</item>
+		<item key="SrcByTrans_SrcAborted">
+			<message>Recherche annulée</message>
+		</item>
+		<!-- System -->
+		<item key="System_AnyKeyToContinue">
+			<message>N'importe quelle touche pour continuer</message>
+		</item>
+		<item key="System_AnyKeyToExit">
+			<message>N'importe quelle touche pour quitter</message>
+		</item>
+		<item key="System_NoReleventTransactions">
+			<message>Vous ne pouvez pas afficher sans transactions appropriées.</message>
+		</item>
+		<item key="System_YToQuitProgram">
+			<message>Êtes-vous sûr de vouloir quitter? (Y) pour sortir, toute autre touche pour continuer</message>
+		</item>
+		<!-- SystemInstructions -->
+		<item key="SystemInstructions_PressToExit">
+			<message>Appuyez pour quitter</message>
+		</item>
+		<item key="SystemInstructions_Abort">
+			<message>Tapez exit pour abandonner</message>
+		</item>
+		<item key="SystemInstructions_AnyKeyToAck">
+			<message>N'importe quelle touche pour confirmer</message>
+		</item>
+		<item key="SystemInstructions_EnterDate">
+			<message>Veuillez entrer la date de la transaction dans le format suivant:</message>
+		</item>
+		<item key="SystemInstructions_EscapeOrBackspace">
+			<message>Escape ou Backspace</message>
+		</item>
+		<item key="SystemInstructions_InputIncomeAmount">
+			<message>Veuillez entrer un montant de revenu comme nombre positif</message>
+		</item>
+		<item key="SystemInstructions_InputMonthForSummary">
+			<message>Sélectionnez le mois pour lequel vous voulez un résumé</message>
+		</item>
+		<item key="SystemInstructions_InputTransDescription">
+			<message>Veuillez entrer une description de la transaction</message>
+		</item>
+		<item key="SystemInstructions_InputYearForSummary">
+			<message>Sélectionnez l'année pour laquelle vous voulez un résumé</message>
+		</item>
+		<item key="SystemInstructions_PageView">
+			<message>Préc: ↑ ← PgUp | Suiv: ↓ → PgDn | Quitter: Esc Q ⌫</message>
+		</item>
+		<item key="SystemInstructions_SpaceOrEnter">
+			<message>Espace ou Entrée</message>
+		</item>
+		<item key="SystemInstructions_ToExitOrAbort">
+			<message>Pour quitter/abandonner</message>
+		</item>
+		<item key="SystemInstructions_ToLoad">
+			<message>Pour charger</message>
+		</item>
+		<item key="SystemInstructions_ToSkip">
+			<message>Pour passer</message>
+		</item>
+		<!-- TransMgnt -->
+		<item key="TransMgnt_AddExpenseTransaction">
+			<message>Ajouter transaction de dépense</message>
+		</item>
+		<item key="TransMgnt_AddIncomeTransaction">
+			<message>Ajouter transaction de revenu</message>
+		</item>
+		<item key="TransMgnt_AddingExpenseFor">
+			<message>Ajout d'une dépense pour</message>
+		</item>
+		<item key="TransMgnt_LabelTransCategory">
+			<message>Catégorie de transaction</message>
+		</item>
+		<item key="TransMgnt_NoDscProvided">
+			<message>Aucune description fournie</message>
+		</item>
+		<item key="TransMgnt_SearchTransactions">
+			<message>Rechercher une transactions</message>
+		</item>
+		<item key="TransMgnt_TransactionAdded">
+			<message>Félicitations, transaction ajoutée!</message>
+		</item>
+		<item key="TransMgnt_ViewAllTransactions">
+			<message>Voir toutes les transactions</message>
+		</item>
+		<!-- Warning -->
+		<item key="Warning_ArgumentIssue">
+			<message>Format de fichier inattendu!</message>
+		</item>
+		<item key="Warning_BadAmountNoZero">
+			<message>Le montant doit être supérieur à zéro et ne peut pas être vide.</message>
+		</item>
+		<item key="Warning_BadAmountZeroOk">
+			<message>Le montant doit être supérieur ou égal à zéro et ne peut pas être vide.</message>
+		</item>
+		<item key="Warning_BadDate">
+			<message>Veuillez utiliser la convention de date appropriée</message>
+		</item>
+		<item key="Warning_BadInput">
+			<message>Entrée invalide! Essayez encore!</message>
+		</item>
+		<item key="Warning_CultureNotFound">
+			<message>Culture introuvable pour</message>
+		</item>
+		<item key="Warning_DateFormat">
+			<message>dd/MM/yyyy</message>
+		</item>
+		<item key="Warning_DateFormatYYYY">
+			<message>yyyy</message>
+		</item>
+		<item key="Warning_DeleteTransactions">
+			<message>Supprimer les transactions supprimera les transactions actuelles et modifier/sauvegarder écrasera le fichier. Une fois modifié ceci est permanent. Sauvegardez votre fichier de transactions si nécessaire.</message>
+		</item>
+		<item key="Warning_DirectoriesNotFound">
+			<message>Répertoires introuvables!</message>
+		</item>
+		<item key="Warning_EmptyOrSpaces">
+			<message>Ne peut pas être vide ou seulement des espaces!</message>
+		</item>
+		<item key="Warning_FileNotAuthorized">
+			<message>Non autorisé à accéder au fichier!</message>
+		</item>
+		<item key="Warning_FileNotFound">
+			<message>Fichier introuvable!</message>
+		</item>
+		<item key="Warning_FileNull">
+			<message>Exception nulle!</message>
+		</item>
+		<item key="Warning_GeneralException">
+			<message>Une erreur s'est produite lors du chargement du fichier!</message>
+		</item>
+		<item key="Warning_InvalidMonth">
+			<message>Veuillez vous assurer que le mois est indiqué par un nombre de 1 à 12</message>
+		</item>
+		<item key="Warning_InvalidYearOld">
+			<message>Assurez-vous que la date n'est pas antérieure à la limite suivante</message>
+		</item>
+		<item key="Warning_InvalidYearNew">
+			<message>La date ne peut pas être dans le futur.</message>
+		</item>
+		<item key="Warning_LanguageNotInList">
+			<message>Ce numéro n'est pas dans la liste!</message>
+		</item>
+		<item key="Warning_NoTransactionsOrBudgetFound">
+			<message>Aucune transaction ou fichier budget trouvé</message>
+		</item>
+		<item key="Warning_XmlFormat">
+			<message>Xml mal formaté!</message>
+		</item>
+		<!-- Write -->
+		<item key="Write_Saved">
+			<message>Sauvegarde sur disque...</message>
+		</item>
+		<item key="Write_SkipSaving">
+			<message>Aucune transaction à sauvegarder, sauvegarde ignorée...</message>
+		</item>
+		<item key="Category_Income">
+			<message>Revenu</message>
+		</item>
+
+		<item key="Category_Housing">
+			<message>Logement</message>
+		</item>
+
+		<item key="Category_Groceries">
+			<message>Épicerie</message>
+		</item>
+
+		<item key="Category_Transportation">
+			<message>Transport</message>
+		</item>
+
+		<item key="Category_Utilities">
+			<message>Services publics</message>
+		</item>
+
+		<item key="Category_Restaurants">
+			<message>Restaurants</message>
+		</item>
+
+		<item key="Category_Insurance">
+			<message>Assurance</message>
+		</item>
+
+		<item key="Category_Debt">
+			<message>Dette</message>
+		</item>
+
+		<item key="Category_Entertainment">
+			<message>Divertissement</message>
+		</item>
+
+		<item key="Category_Healthcare">
+			<message>Soins de santé</message>
+		</item>
+
+		<item key="Category_Transfers">
+			<message>Transferts</message>
+		</item>
+
+		<item key="Category_Fees">
+			<message>Frais</message>
+		</item>
+
+		<item key="Category_Other">
+			<message>Autre</message>
+		</item>
+	</fr>
+</lang>
