@@ -4,9 +4,13 @@ Populate this folder as group members' collaboration and notes.
 
 # Members Responsabilities
 * **Nabiha**
-  * To be discussed
+  * College Class
+  *  Final Code Review
     
 * **Jax**
+  * Student Class
+  * Course Class
+  * StdentCourseProfile
   *  Final Code Review
     
 * **Eric** (Example list, to be discussed)
