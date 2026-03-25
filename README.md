@@ -1,27 +1,105 @@
 # COMP1202_Group1_Assignment2
 
 Populate this folder as group members' collaboration and notes.
+Current notes:
+Please use ColorConsole.Write, ColorConsole.WriteLine, ColorConsole.ReadLine for messages. the first paramater for Writes is a strung for message, after that are 2index array of ConsoleColor[] for fg, bg.
+Method is available for reading the paramaters availble.
+Secondly message should be formatted like this:
+ enum MessageEnum {
+            #region >>> // System
+            System_AnyKeyToContinue,
+            System_AnyKeyToExit,
+            System_YToQuitProgram,
+            System_NoReleventTransactions,
+   #endregion
+            #region >>> // System instructions
+            SystemInstructions_AnyKeyToAck,
+            SystemInstructions_EscapeOrBackspace,
+            SystemInstructions_ToExitOrAbort,
+            SystemInstructions_InputYearForSummary,
+            SystemInstructions_InputMonthForSummary,
+            SystemInstructions_Abort,
+               #endregion
+               }
+               As an example, then the message is found in
+               
+                static Dictionary<MessageEnum, string> defaultEnglishMessages = new() {
+            { MessageEnum.System_AnyKeyToContinue, "Any key to continue" },
+            }
+            This is one entry, the enum must be found in Messageenum, and the message Any Key to continue will be translated to other languages.
+            we will then migrate that list over to (ill handle the migrating)
+            
+              //Creates an empty dictionary to populate the active language into
+        public static Dictionary<MessageEnum, string> messageOutput = new();
+
+        And also the color for the ColorConsole uses an enuma nd dictionary of colors like so:
+        
+
+    /// <summary>
+    /// Enum for pointing to colors based on groups in the dictionary colorByGroup.
+    /// </summary>
+    enum ColorGroup {
+        Default,
+        SystemWarning,
+        SystemError,
+        SystemInstructions,
+        SystemInstructionsGray,
+        SystemPromptHint,
+        SystemPromptInstructions,
+        MenuHeadings,
+        MenuItems,
+        Success,
+        Header,
+        InputStyleA,
+        InputStyleText
+    }
+public static Dictionary<ColorGroup, ConsoleColor [ ]> colorByGroup = new() {
+            {ColorGroup.Default, [ConsoleColor.White, ConsoleColor.Black ] },
+            {ColorGroup.SystemWarning, [ConsoleColor.Red, ConsoleColor.Black ] },
+
+            {ColorGroup.SystemError, [ConsoleColor.Red, ConsoleColor.White ] },
+            {ColorGroup.SystemInstructions, [ConsoleColor.Cyan, ConsoleColor.Black ] },
+            {ColorGroup.SystemInstructionsGray, [ConsoleColor.Gray, ConsoleColor.Black ] },
+            {ColorGroup.MenuHeadings, [ConsoleColor.Cyan, ConsoleColor.Black ] },
+            {ColorGroup.MenuItems, [ConsoleColor.Green, ConsoleColor.Black ] },
+            {ColorGroup.Success, [ConsoleColor.Black, ConsoleColor.Yellow ] },
+            {ColorGroup.Header, [ConsoleColor.Yellow, ConsoleColor.Black ] },
+            {ColorGroup.InputStyleA, [ConsoleColor.Black, ConsoleColor.White ] },
+            {ColorGroup.InputStyleText, [ConsoleColor.Yellow, ConsoleColor.Black ] },
+            {ColorGroup.SystemPromptHint, [ConsoleColor.Gray, ConsoleColor.Black ] },
+            {ColorGroup.SystemPromptInstructions, [ConsoleColor.Cyan, ConsoleColor.Black ] }
+        };
+
+            
 
 # Members Responsabilities
 * **Nabiha**
   * College Class
+  * Program.cs main menu
+  * Documentation related to College Class and Program Class
   *  Final Code Review
     
 * **Jax**
   * Student Class
   * Course Class
-  * StdentCourseProfile
+  * StudentCourseProfile
+  *  Documentation related to Student Class, Course Class, and StudentCourseProfile class
   *  Final Code Review
     
 * **Eric** (Example list, to be discussed)
-  * Running the Git Hub
+  * DisplayAll
+  * SecureFile class
+  * Documentation related to DisplayAll Class, SecureFile Class, GitHub, etc.
   * Final Code Review
-  * Documentation Oversight
-  * Code Oversight
-  * File Saving Oversight
-  * Displaying running lists
-  * Project Co-ordination
-  * Refrence code for key concepts int he programming and relevent concepts.
+  * Documentation final review Oversight
+  * Running the Git Hub
+  * Provided Refrence code for College.cs, Student.cs, Course.cs, StudenCourseProfile.cs and Program.cs
+  * EXTENDED FUNCTIONALITY:
+       * Various Language support
+       * ConsoleColor.cs for improved coloring
+       * Enumerators for tracking langauges
+       * AnimatedIntro
+       * AnyKeyToContinue Conformation
   
 **Currently there are three folders:**
 
