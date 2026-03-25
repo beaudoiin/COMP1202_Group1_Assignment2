@@ -4,20 +4,22 @@ Populate this folder as group members' collaboration and notes.
 
 **Currently there are three folders:**
 
- 1. Development: Actual acceptable code for the project can go here. If you want to test some specifics, do so on your local machine or on a forked repository.
+ 1. assignment2: Actual acceptable code for the project refrence can go here. If you want to test some specifics that can be here too
+    This folder exists becuase it was going to be the origonal program, but too much code was solved by one handsome ambitious member, se the new project folder is just "source".
 
  2. Documentation: This is the documentation file and any collected resources that we need for the completion and presentation of this project. Some examples may be articles about how to do specific coding methods or the actual document we prepare for the professor.
 
- 3. Reference code we may want to incorporate, which is not ready or not fully decided it should go in. For example, I added a ColorConsole class, which replaces Console. Write and writeLine. This is not incorporated because it currently requires enums to set the colors, a dictionary for the error message, and is a replacement for ANSI escape codes, which may be the way we want to go instead. Other such codes are in there; take a look.
+ 3. Reference code, similar to assignment 2 we may want to incorporate, which is not ready or not fully decided it should go in. For example, I added a ColorConsole class, which replaces Console. Write and writeLine. This is not incorporated because it currently requires enums to set the colors, a dictionary for the error message, and is a replacement for ANSI escape codes, which may be the way we want to go instead. Other such codes are in there; take a look.
 
- 4. Main folder, for these three folders and the readme. We may add other project-wide READMEs, like if each contributor wants **[TheirName].md** to display a running list of what they have implemented, are in charge of, or their thoughts.
+ 4. Main folder, for these four folders and the readme. We may add other project-wide READMEs, like if each contributor wants **[TheirName].md** to display a running list of what they have implemented, are in charge of, or their thoughts.
+ 5. source, this is the folder of the code we are all contributing too. The final files for submission should be found and used here when submitting.
 
 # Members Responsabilities
 * **Nabiha**
   * To be discussed
     
 * **Jax**
-  * To be discussed
+  *  Final Code Review
     
 * **Eric** (Example list, to be discussed)
   * Running the Git Hub
@@ -27,11 +29,12 @@ Populate this folder as group members' collaboration and notes.
   * File Saving Oversight
   * Displaying running lists
   * Project Co-ordination
+  * Refrence code for key concepts int he programming and relevent concepts.
 
   # Current updates
 
   # Eric's Notes
-  
+  * Added a source file so we can start form scratch so each member can contribute evenly.  
   * Added some classes, and a bit of an outline, code needs to be refined. There is a lot going on but generally speaking there is:
   * The main program Program.cs which contains the main menu as a sample, and a couple minimalist functions such as adding and student. Mostly this is barebones.
   * SecureFile.cs for saving files either encrypted or not (searlized JSON)
