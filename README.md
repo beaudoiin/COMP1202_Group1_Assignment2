@@ -8,9 +8,11 @@
   *  Final Code Review
     
 * **Jax**
-  * ✅ Student Class
-  * ✅ Course Class
-  * ✅ StudentCourseProfile
+//Ensure exceptions are custom names, thus we can use those exceptions in validation logic, and exceptions msg wont be used to send to user, so instead of gussing what exception is thown
+//we can use a specific name and then format the message to the user using langauge ditionary, coloring and formating.
+  * ✅ Student Class  _(custom exceptions with proper naming required)_
+  * ✅ Course Class _(custom exceptions with proper naming required)_
+  * ✅ StudentCourseProfile _(Just needs to validate registration dates)  (custom exceptions with proper naming required)_
   *  Documentation related to Student Class, Course Class, and StudentCourseProfile class
   *  Final Code Review
     
