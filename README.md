@@ -7,7 +7,7 @@
   * Documentation related to College Class and Program Class
   *  Final Code Review
     
-* **Jax**
+* **Jax** ⭐
 
   //Ensure exceptions are custom names, thus we can use those exceptions in validation logic, and exceptions msg wont be used to send to user, so instead of gussing what exception is thown
   //we can use a specific name and then format the message to the user using langauge ditionary, coloring and formating.
@@ -17,7 +17,7 @@
   *  Documentation related to Student Class, Course Class, and StudentCourseProfile class
   *  Final Code Review
 
-  //Nice contribution with using exceptions inside the class to pretect the object from having invalid data!
+  //Nice contribution with using exceptions inside the class to pretect the object from having invalid data! ⭐
     
 * **Eric** (Example list, to be discussed)
   * DisplayAll
