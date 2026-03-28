@@ -15,6 +15,7 @@
   * ✅ StudentCourseProfile _(Just needs to validate registration dates)  (custom exceptions with proper naming required)_
   *  Documentation related to Student Class, Course Class, and StudentCourseProfile class
   *  Final Code Review
+ //Nice contribution with using exceptions inside the class to pretect the object from having invalid data!
     
 * **Eric** (Example list, to be discussed)
   * DisplayAll
