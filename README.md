@@ -8,14 +8,16 @@
   *  Final Code Review
     
 * **Jax**
-//Ensure exceptions are custom names, thus we can use those exceptions in validation logic, and exceptions msg wont be used to send to user, so instead of gussing what exception is thown
-//we can use a specific name and then format the message to the user using langauge ditionary, coloring and formating.
+
+  //Ensure exceptions are custom names, thus we can use those exceptions in validation logic, and exceptions msg wont be used to send to user, so instead of gussing what exception is thown
+  //we can use a specific name and then format the message to the user using langauge ditionary, coloring and formating.
   * ✅ Student Class  _(custom exceptions with proper naming required)_
   * ✅ Course Class _(custom exceptions with proper naming required)_
   * ✅ StudentCourseProfile _(Just needs to validate registration dates)  (custom exceptions with proper naming required)_
   *  Documentation related to Student Class, Course Class, and StudentCourseProfile class
   *  Final Code Review
- //Nice contribution with using exceptions inside the class to pretect the object from having invalid data!
+
+  //Nice contribution with using exceptions inside the class to pretect the object from having invalid data!
     
 * **Eric** (Example list, to be discussed)
   * DisplayAll
