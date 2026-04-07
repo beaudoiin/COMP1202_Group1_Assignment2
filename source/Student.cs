@@ -122,5 +122,12 @@ namespace assignment2
             Console.WriteLine($"ID: {StudentId}, Name: {Name}, Email: {Email}, Courses Enrolled: {EnrolledCourses.Count}");
         }
 
+        
+        // Fix for loading IDs from file - Nabiha
+        public static void SetLastId(int lastId)
+        {
+            s_studentIdGenerator = lastId;
+        }
+
     }
 }
