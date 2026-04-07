@@ -212,44 +212,42 @@ namespace assignment2
 }
 
 /*
-College Class
+College.cs - Handles Students, Courses, and Registrations
 
-This class manages all students, courses, and registrations for the College Course Registration System.
-It demonstrates aggregation, 2D array usage, and file I/O.
+Purpose:
+The College class manages all students, courses, and registrations in the system.
+It contains methods to add students/courses, register students, display information,
+and handle file input/output.
 
-Main Responsibilities:
+Classes Used:
+- Student: Represents a student with ID, name, email, and list of enrolled courses.
+- Course: Represents a course with ID, name, credit hours, description, and list of enrolled students.
+- Optional: StudentCourseProfile (not currently used; could store registration details like date and grades).
 
-* Manage Students
-- Add new students with auto-incremented Student IDs.
-- Store students in a List<Student>.
-- Display all students.
+Design Overview:
+1. 2D Array for Registrations:
+   - A boolean 2D array, bool[,] registrations, is used where
+     rows = students and columns = courses.
+   - If registrations[i,j] == true, it means student i is registered for course j.
+   - This allows efficient lookups and satisfies the assignment rubric.
 
-* Manage Courses
-- Add new courses with auto-incremented Course IDs.
-- Store courses in a List<Course>.
-- Display all courses.
+2. File I/O:
+   - SaveData() / LoadData():
+     - Stores students.txt, courses.txt, registrations.txt separately.
+     - Reads/writes using StreamWriter / File.ReadAllLines.
+     - Restores system state by reading files and re-populating lists and 2D array.
+   - Handles static counters (StudentID and CourseID) to maintain consistent IDs.
+   - Prevents duplicate registrations by checking the 2D array before adding a new registration.
 
-* Manage Registrations
-- Register students to courses using a 2D boolean array (registrations) where rows represent students and columns represent courses.
-- Prevent duplicate registrations.
-- Display all registrations clearly, showing which students are enrolled in which courses.
+3. Optional Secure File Handling:
+   - Can integrate SecureFile class for encrypted save/load without affecting main logic.
 
-* File I/O
-- Save students, courses, and registrations to separate text files (students.txt, courses.txt, registrations.txt).
-- Load data from files and restore the previous system state.
-- Preserve correct IDs by manually setting StudentId and CourseId when loading and updating static counters.
-- Handle missing files gracefully.
+Key Features:
+- AddStudent(name, email) and AddCourse(name, credits, description) create new entities and auto-assign unique IDs.
+- RegisterStudent(studentId, courseId) updates both the 2D array and the enrolled lists.
+- Display methods loop through students and courses to show information.
+- Save/Load methods ensure data persists between program executions.
 
-Key Features / Notes:
-
-- Auto-Incremented IDs: StudentId and CourseId are automatically incremented when adding new objects.
-- Duplicate Registration Prevention: The code checks if a student is already registered in a course before adding.
-- Static Counter Fix: LoadData restores the static counters so new IDs continue correctly after loading data.
-
-* Aggregation: Students and Courses are stored inside the College class; College “has” Students and Courses, demonstrating composition.
-* 2D Array: A boolean[,] array tracks the student-course relationship efficiently.
-* Helper Methods: AddStudent, AddCourse, RegisterStudent, DisplayStudents, DisplayCourses, DisplayRegistrations, SaveData, LoadData.
-
-Overall, the College class centralizes all operations related to students, courses, 
-and enrollments, ensuring the menu-driven program can manage the system consistently and safely.
+This class demonstrates object-oriented design, aggregation, exception handling,
+file I/O, and menu-driven console programming.
 */
