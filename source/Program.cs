@@ -141,9 +141,31 @@ namespace assignment2
     }
 }
 
-// Program.cs is the main console application for the College Course Registration System.
-//     It creates a College object to manage all students, courses, and registrations.
-//     The program displays a menu and uses a while loop to keep running until the user exits.
-//     Users can add students/courses, register students to courses, display information, and save or load data.
-//     Helper methods handle input validation and call methods in the College class.
-// This program demonstrates menu-driven functionality and integrates the 2D array registration system and file I/O.
+/*
+Program.cs
+
+This is the main console application for the College Course Registration System.
+It provides a menu-driven interface to interact with the College class and manage
+students, courses, and registrations.
+
+Main Responsibilities:
+1. Create a College object to manage all students, courses, and registrations.
+2. Display a looping menu with options to:
+   - Add a new student
+   - Add a new course
+   - Register a student to a course
+   - Display all students
+   - Display all courses
+   - Display all registrations
+   - Save data
+   - Load data
+   - Exit the program
+3. Call the appropriate College class methods based on user input.
+4. Handle input validation using helper methods to ensure correct data types.
+5. Demonstrate menu-driven functionality and integrate the 2D array registration
+   system and file I/O.
+
+Overall, Program.cs manages user interaction and delegates the actual system
+operations to the College class, providing a clean and interactive console experience.
+*/
+
