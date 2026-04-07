@@ -166,5 +166,12 @@ namespace assignment2
         {
             return $"Course: {CourseName}, ID: {CourseId}, Credit Hours: {CreditHours}, Number of Enrolled Students: {EnrolledStudents.Count}";
         }
+
+        //  Fix for loading IDs from file - Nabiha
+        public static void SetLastId(int lastId)
+        {
+            s_courseIdGenerator = lastId;
+        }
+
     }
 }
