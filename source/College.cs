@@ -210,3 +210,46 @@ namespace assignment2
 
     }
 }
+
+/*
+College Class
+
+This class manages all students, courses, and registrations for the College Course Registration System.
+It demonstrates aggregation, 2D array usage, and file I/O.
+
+Main Responsibilities:
+
+* Manage Students
+- Add new students with auto-incremented Student IDs.
+- Store students in a List<Student>.
+- Display all students.
+
+* Manage Courses
+- Add new courses with auto-incremented Course IDs.
+- Store courses in a List<Course>.
+- Display all courses.
+
+* Manage Registrations
+- Register students to courses using a 2D boolean array (registrations) where rows represent students and columns represent courses.
+- Prevent duplicate registrations.
+- Display all registrations clearly, showing which students are enrolled in which courses.
+
+* File I/O
+- Save students, courses, and registrations to separate text files (students.txt, courses.txt, registrations.txt).
+- Load data from files and restore the previous system state.
+- Preserve correct IDs by manually setting StudentId and CourseId when loading and updating static counters.
+- Handle missing files gracefully.
+
+Key Features / Notes:
+
+- Auto-Incremented IDs: StudentId and CourseId are automatically incremented when adding new objects.
+- Duplicate Registration Prevention: The code checks if a student is already registered in a course before adding.
+- Static Counter Fix: LoadData restores the static counters so new IDs continue correctly after loading data.
+
+* Aggregation: Students and Courses are stored inside the College class; College “has” Students and Courses, demonstrating composition.
+* 2D Array: A boolean[,] array tracks the student-course relationship efficiently.
+* Helper Methods: AddStudent, AddCourse, RegisterStudent, DisplayStudents, DisplayCourses, DisplayRegistrations, SaveData, LoadData.
+
+Overall, the College class centralizes all operations related to students, courses, 
+and enrollments, ensuring the menu-driven program can manage the system consistently and safely.
+*/
